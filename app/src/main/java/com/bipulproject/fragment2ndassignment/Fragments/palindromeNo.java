@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bipulproject.fragment2ndassignment.R;
@@ -21,6 +22,7 @@ public class palindromeNo extends Fragment implements View.OnClickListener {
 
     private Button btnPalindrome;
     private EditText etNumber;
+    private TextView tvResult;
 
 
 
@@ -37,6 +39,7 @@ public class palindromeNo extends Fragment implements View.OnClickListener {
 
         etNumber = view.findViewById(R.id.etNumber);
         btnPalindrome = view.findViewById(R.id.btnPalindrome);
+        tvResult = view.findViewById(R.id.tvResult);
 
         btnPalindrome.setOnClickListener(this);
         return view;
@@ -55,10 +58,10 @@ public class palindromeNo extends Fragment implements View.OnClickListener {
         }
         if(temp==sum)
 
-            Toast.makeText(getActivity(),"The number is Palindrome.", Toast.LENGTH_SHORT).show();
+            tvResult.setText("The Number is Palindrome");
 
         else
-            Toast.makeText(getActivity(),"The number is not Palindrome.",Toast.LENGTH_SHORT).show();
+            tvResult.setText("The Number is Not Palindrome");
 
     }
 }

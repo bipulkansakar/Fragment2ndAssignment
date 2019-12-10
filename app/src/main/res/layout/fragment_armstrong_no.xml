@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Fragments.Armstrong">
+    tools:context=".Fragments.ArmstrongNo">
 
 
     <EditText
@@ -23,6 +23,10 @@
         android:textSize="20sp"
         android:id="@+id/btnArmstrong"/>
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvResult"/>
 
 </LinearLayout>
 

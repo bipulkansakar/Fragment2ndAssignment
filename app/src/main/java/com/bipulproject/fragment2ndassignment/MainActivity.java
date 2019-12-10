@@ -4,18 +4,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
 import com.bipulproject.fragment2ndassignment.Fragments.AreaofCircle;
-import com.softwarica.secondassignment.Fragments.AreaofCircle;
-import com.softwarica.secondassignment.Fragments.Armstrong;
-import com.softwarica.secondassignment.Fragments.Automorphic;
-import com.softwarica.secondassignment.Fragments.Palindrome;
-import com.softwarica.secondassignment.Fragments.SimpleInterest;
-import com.softwarica.secondassignment.Fragments.Swapping;
+import com.bipulproject.fragment2ndassignment.Fragments.palindromeNo;
+import com.bipulproject.fragment2ndassignment.Fragments.ArmstrongNo;
+import com.bipulproject.fragment2ndassignment.Fragments.AutoMorphic;
+import com.bipulproject.fragment2ndassignment.Fragments.SimpleInterest;
+import com.bipulproject.fragment2ndassignment.Fragments.Swapping;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -57,46 +55,31 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 fragmentTransaction.replace(R.id.fragmentContainer,areaofCircle);
                 fragmentTransaction.commit();
                 break;
-        }
+        case R.id.btnPalindrome:
 
-        switch (v.getId()) {
-            case R.id.btnPalindrome:
-
-                btnPalindromeNo palindrome = new palindromeNo();
+                palindromeNo palindrome = new palindromeNo();
                 fragmentTransaction.replace(R.id.fragmentContainer,palindrome);
                 fragmentTransaction.commit();
                 break;
-        }
-
-        switch (v.getId()) {
-            case R.id.btnSimpleInterest:
+        case R.id.btnSimpleInterest:
 
                 SimpleInterest simpleInterest = new SimpleInterest();
                 fragmentTransaction.replace(R.id.fragmentContainer,simpleInterest);
                 fragmentTransaction.commit();
                 break;
-        }
+        case R.id.btnArmstrong:
 
-        switch (v.getId()) {
-            case R.id.btnArmstrong:
-
-                Armstrong armstrong = new Armstrong();
+                ArmstrongNo armstrong = new ArmstrongNo();
                 fragmentTransaction.replace(R.id.fragmentContainer,armstrong);
                 fragmentTransaction.commit();
                 break;
-        }
+        case R.id.btnAutoMorphic:
 
-        switch (v.getId()) {
-            case R.id.btnAutomorphic:
-
-                Automorphic automorphic = new Automorphic();
+                AutoMorphic automorphic = new AutoMorphic();
                 fragmentTransaction.replace(R.id.fragmentContainer,automorphic);
                 fragmentTransaction.commit();
                 break;
-        }
-
-        switch (v.getId()) {
-            case R.id.btnSwapping:
+        case R.id.btnSwapping:
 
                 Swapping swapping = new Swapping();
                 fragmentTransaction.replace(R.id.fragmentContainer,swapping);

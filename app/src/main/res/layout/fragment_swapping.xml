@@ -31,4 +31,9 @@
         android:textSize="20sp"
         android:id="@+id/btnSwapping"/>
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvResult"/>
+
 </LinearLayout>

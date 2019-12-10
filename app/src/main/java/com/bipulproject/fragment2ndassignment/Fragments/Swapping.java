@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bipulproject.fragment2ndassignment.R;
@@ -21,6 +22,7 @@ public class Swapping extends Fragment implements View.OnClickListener{
 
     private Button btnSwapping;
     private EditText etFirst, etSecond;
+    private TextView tvResult;
 
 
     public Swapping() {
@@ -36,6 +38,7 @@ public class Swapping extends Fragment implements View.OnClickListener{
 
         etFirst = view.findViewById(R.id.etFirst);
         etSecond = view.findViewById(R.id.etSecond);
+        tvResult = view.findViewById(R.id.tvResult);
         btnSwapping = view.findViewById(R.id.btnSwapping);
 
         btnSwapping.setOnClickListener(this);
@@ -51,7 +54,7 @@ public class Swapping extends Fragment implements View.OnClickListener{
         second = first - second;
         first = first - second;
 
-        Toast.makeText(getActivity(),"After Swapping" + " first = " + first + ", second = " + second, Toast.LENGTH_SHORT).show();
+        tvResult.setText("After Swapping" + " first = " + first + ", second = " + second);
 
     }
 }
